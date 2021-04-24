@@ -78,7 +78,7 @@
                   <font-awesome-icon :icon="['fab', 'twitter']" class="mr-1" />
                   Twitter
                 </a>
-                <p class="py-1" @click="copyDiscordId()">
+                <p class="py-1 cursor-pointer" @click="copyDiscordId()">
                   <font-awesome-icon :icon="['fab', 'discord']" class="mr-2" />
                   Arthur#0004
                 </p>
@@ -129,9 +129,9 @@ export default {
     },
     copyDiscordId () {
       navigator.clipboard.writeText('Arthur#0004').then(() => {
-        // this.$toast.global.success({ message: this.$t('toast.copySuccess') })
+        this.$toast.global.success({ message: 'Discord ID successfully copied to clipboard.' })
       }, () => {
-        // this.$toast.global.error({ message: this.$t('toast.copyFailure') })
+        this.$toast.global.error({ message: 'An error has occured.' })
       })
     }
   }
