@@ -1,0 +1,23 @@
+/* Default page transition */
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+}
+
+/* Default LAYOUT transition */
+.layout-enter-active, .layout-leave-active {
+  transition: opacity .3s
+}
+.layout-enter, .layout-leave-active {
+  opacity: 0
+}
+
+/* Fade transition */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

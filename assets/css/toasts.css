@@ -1,0 +1,16 @@
+.toasted .primary,
+.toasted.toasted-primary {
+  border-radius: 6px !important;
+  justify-content: start !important;
+  font-weight: 400 !important;
+}
+
+.toasted .primary.error,
+.toasted.toasted-primary.error {
+  background-color: rgb(191, 97, 106) !important;
+}
+
+.toasted .primary.success,
+.toasted.toasted-primary.success {
+  background-color: rgb(163, 190, 140) !important;
+}

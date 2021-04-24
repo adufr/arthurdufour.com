@@ -1,0 +1,28 @@
+/**
+** Hide scrollbar without removing them
+**/
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent !important;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  background-color: #b4b3b3;
+}
