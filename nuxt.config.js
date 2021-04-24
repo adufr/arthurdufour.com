@@ -21,11 +21,13 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/global.css',
-    '~/assets/css/transitions.css'
+    '~/assets/css/transitions.css',
+    '~/assets/css/toasts.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/global-toasts.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,6 +50,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://github.com/nuxt-community/community-modules/tree/master/packages/toast
+    '@nuxtjs/toast'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
