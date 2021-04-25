@@ -27,7 +27,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/global-toasts.js', ssr: false }
+    { src: '~/plugins/global-toasts.js', ssr: false },
+    { src: '~/plugins/vue-plausible.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,7 +52,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://github.com/nuxt-community/community-modules/tree/master/packages/toast
-    '@nuxtjs/toast'
+    '@nuxtjs/toast',
+    // https://github.com/moritzsternemann/vue-plausible
+    'vue-plausible'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -81,5 +84,13 @@ export default {
         'faMoon', 'faSun'],
       brands: ['faTwitter', 'faGithub', 'faDiscord']
     }
+  },
+
+  // https://github.com/moritzsternemann/vue-plausible
+  plausible: {
+    apiHost: 'https://analytics.arthurdufour.com',
+    domain: 'arthurdufour.com',
+    hashMode: false,
+    trackLocalhost: false
   }
 }
